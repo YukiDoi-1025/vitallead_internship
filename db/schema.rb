@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_09_02_021642) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_02_060702) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
-  create_table "addresses", force: :cascade do |t|
-    t.float "ido"
-    t.float "keido"
+  create_table "maps", force: :cascade do |t|
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

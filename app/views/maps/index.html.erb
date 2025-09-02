@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Maps" %>
+
+<h1>一覧</h1>
+
+<div id="maps">
+  <% @maps.each do |map| %>
+    <%= render map %>
+    <p>
+      <%= link_to "詳細", map %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "新規登録", new_map_path %>

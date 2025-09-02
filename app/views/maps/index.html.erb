@@ -2,15 +2,15 @@
 
 <% content_for :title, "Maps" %>
 
-<h1>Maps</h1>
+<h1>一覧</h1>
 
 <div id="maps">
   <% @maps.each do |map| %>
     <%= render map %>
     <p>
-      <%= link_to "Show this map", map %>
+      <%= link_to "詳細", map %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New map", new_map_path %>
+<%= link_to "新規登録", new_map_path %>

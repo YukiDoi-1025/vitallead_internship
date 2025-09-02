@@ -12,21 +12,16 @@
   <% end %>
 
   <div>
-    <%= form.label :address, style: "display: block" %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div>
-    <%= form.label :latitude, style: "display: block" %>
+    <%= form.label :緯度, style: "display: block" %>
     <%= form.text_field :latitude %>
   </div>
 
   <div>
-    <%= form.label :longitude, style: "display: block" %>
+    <%= form.label :経度, style: "display: block" %>
     <%= form.text_field :longitude %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "住所表示" %>
   </div>
 <% end %>

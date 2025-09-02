@@ -3,8 +3,8 @@
 <%= render @map %>
 
 <div>
-  <%= link_to "Edit this map", edit_map_path(@map) %> |
-  <%= link_to "Back to maps", maps_path %>
+  <%= link_to "編集", edit_map_path(@map) %> |
+  <%= link_to "一覧へ", maps_path %>
 
-  <%= button_to "Destroy this map", @map, method: :delete %>
+  <%= button_to "削除", @map, method: :delete %>
 </div>

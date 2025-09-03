@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :緯度, style: "display: block" %>
-    <%= form.text_field :latitude %>
+  <div class="row mb-4">
+    <div class="col-5">
+      <%= form.label :緯度, style: "display: block" %>
+      <%= form.text_field :latitude %>
+    </div>
+
+    <div class="col-5">
+      <%= form.label :経度, style: "display: block" %>
+      <%= form.text_field :longitude %>
+    </div>
   </div>
 
   <div>
-    <%= form.label :経度, style: "display: block" %>
-    <%= form.text_field :longitude %>
-  </div>
-
-  <div>
-    <%= form.submit "住所表示" %>
+    <%= form.submit "住所表示" , class: "btn btn-primary" %>
   </div>
 <% end %>

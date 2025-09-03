@@ -2,7 +2,7 @@
 
 <% content_for :title, "Maps" %>
 
-<h1>一覧</h1>
+<h2 class="text-primary">一覧</h2>
 
 <div id="maps">
   <% @maps.each do |map| %>
@@ -13,4 +13,4 @@
   <% end %>
 </div>
 
-<%= link_to "新規登録", new_map_path %>
+<%= link_to "新規登録", new_map_path, class: "fs-3" , class: "link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"%>

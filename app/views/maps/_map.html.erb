@@ -1,17 +1,21 @@
 <div id="<%= dom_id map %>">
-  <p>
-    <strong>住所:</strong>
-    <%= map.display_address %>
-  </p>
 
-  <p>
-    <strong>緯度:</strong>
-    <%= map.latitude %>
-  </p>
+  <div class="border border-4">
+    <div class="row mx-2 mt-2">
+      <p class="col-3">
+        <strong>緯度:</strong>
+        <%= map.latitude %>
+      </p>
 
-  <p>
-    <strong>経度:</strong>
-    <%= map.longitude %>
-  </p>
+      <p class="col-3">
+        <strong>経度:</strong>
+        <%= map.longitude %>
+      </p>
+    </div>
 
+    <p class="fs-3 mx-3 text-primary-emphasis border-top">
+      <strong>住所 : </strong>
+      <%= map.display_address %>
+    </p>
+  </div>
 </div>

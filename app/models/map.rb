@@ -3,7 +3,11 @@ class Map < ApplicationRecord
   after_validation :reverse_geocode
 
   def display_address
-    address_array = address.split(",")
-    "#{address_array[-1]} #{address_array[-3]} #{address_array[-4]} #{address_array[-5]}"
+    if address.nil?
+      ""
+    else
+      address_array = address.split(",")
+      "#{address_array[-1]} #{address_array[-3]} #{address_array[-4]} #{address_array[-5]}"
+    end
   end
 end

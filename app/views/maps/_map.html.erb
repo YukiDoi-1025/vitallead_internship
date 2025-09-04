@@ -24,6 +24,20 @@
       <%= map.memo %>
     </p>
 
+   <div id="tizu_<%=map.id%>" style="height: 200px; width: 400px;" ></div>
+
   </div>
 
 </div>
+
+<script>
+  var map = L.map("tizu_<%=map.id%>").setView([<%= map.latitude %>, <%= map.longitude %>], 13);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  var marker = L.marker([<%= map.latitude %>, <%= map.longitude %>]).addTo(map);
+
+  marker.bindPopup("<%= map.memo %>");
+</script>

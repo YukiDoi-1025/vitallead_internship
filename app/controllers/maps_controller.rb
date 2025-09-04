@@ -25,7 +25,7 @@ class MapsController < ApplicationController
 
     respond_to do |format|
       if @map.save
-        format.html { redirect_to @map, notice: "Map was successfully created." }
+        format.html { redirect_to @map }
         format.json { render :show, status: :created, location: @map }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,7 @@ class MapsController < ApplicationController
   def update
     respond_to do |format|
       if @map.update(map_params)
-        format.html { redirect_to @map, notice: "Map was successfully updated.", status: :see_other }
+        format.html { redirect_to @map, status: :see_other }
         format.json { render :show, status: :ok, location: @map }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class MapsController < ApplicationController
     @map.destroy!
 
     respond_to do |format|
-      format.html { redirect_to maps_path, notice: "Map was successfully destroyed.", status: :see_other }
+      format.html { redirect_to maps_path, notice: "登録情報が削除されました", status: :see_other }
       format.json { head :no_content }
     end
   end

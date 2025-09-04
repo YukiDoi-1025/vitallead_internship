@@ -24,6 +24,12 @@
   </div>
 
   <div>
+    <%= form.label :メモ, style: "display: block" %>
+    <%= form.text_field :memo %>
+  </div>
+
+  <div class="mt-5">
     <%= form.submit "住所表示" , class: "btn btn-primary" %>
   </div>
+
 <% end %>

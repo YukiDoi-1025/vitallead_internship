@@ -1,7 +1,8 @@
 <div id="<%= dom_id map %>">
 
   <div class="border border-4">
-    <div class="row mx-2 mt-2">
+
+    <div class="row mx-2 mt-2 border-bottom">
       <p class="col-3">
         <strong>緯度:</strong>
         <%= map.latitude %>
@@ -13,9 +14,16 @@
       </p>
     </div>
 
-    <p class="fs-3 mx-3 text-primary-emphasis border-top">
+    <p class="fs-3 mx-3">
       <strong>住所 : </strong>
       <%= map.display_address %>
     </p>
+
+    <p class="mx-4">
+      メモ : 
+      <%= map.memo %>
+    </p>
+
   </div>
+
 </div>

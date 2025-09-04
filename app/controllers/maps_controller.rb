@@ -65,6 +65,6 @@ class MapsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def map_params
-      params.expect(map: [ :latitude, :longitude ])
+      params.expect(map: [ :latitude, :longitude, :memo ])
     end
 end

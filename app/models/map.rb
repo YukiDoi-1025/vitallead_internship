@@ -7,7 +7,7 @@ class Map < ApplicationRecord
       ""
     else
       address_array = address.split(",")
-      "#{address_array[-1]} #{address_array[-3]} #{address_array[-4]} #{address_array[-5]}"
+      "#{address_array[-1]}  #{address_array[-3]}  #{address_array[-4]}  #{address_array[-5]}"
     end
   end
 end

@@ -64,3 +64,5 @@ end
 gem "pg"
 
 gem "geocoder"
+
+gem "rails-i18n"

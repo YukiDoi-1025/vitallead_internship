@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      map: 住所
+    attributes:
+      map:
+        address: 住所
+        latitude: 緯度
+        longitude: 経度
+        memo: メモ

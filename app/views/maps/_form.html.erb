@@ -11,17 +11,25 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :緯度, style: "display: block" %>
-    <%= form.text_field :latitude %>
+  <div class="row mb-4">
+    <div class="col-5">
+      <%= form.label :緯度, style: "display: block" %>
+      <%= form.text_field :latitude, :placeholder => "値を入力してください" %>
+    </div>
+
+    <div class="col-5">
+      <%= form.label :経度, style: "display: block" %>
+      <%= form.text_field :longitude, :placeholder => "値を入力してください"%>
+    </div>
   </div>
 
   <div>
-    <%= form.label :経度, style: "display: block" %>
-    <%= form.text_field :longitude %>
+    <%= form.label :メモ, style: "display: block" %>
+    <%= form.text_field :memo %>
   </div>
 
-  <div>
-    <%= form.submit "住所表示" %>
+  <div class="mt-5">
+    <%= form.submit "住所表示" , class: "btn btn-outline-primary" %>
   </div>
+
 <% end %>

@@ -2,9 +2,11 @@
 
 <%= render @map %>
 
-<div>
-  <%= link_to "編集", edit_map_path(@map) %> |
-  <%= link_to "一覧へ", maps_path %>
+<div >
+  <%= button_to "削除", @map, method: :delete , class:"mt-1 mb-4" %>
 
-  <%= button_to "削除", @map, method: :delete %>
+  <div class="fs-5">
+    <%= link_to "編集", edit_map_path(@map) %> |
+    <%= link_to "一覧へ", maps_path %>
+  </div>
 </div>

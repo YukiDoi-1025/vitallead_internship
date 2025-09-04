@@ -1,12 +1,12 @@
 <% content_for :title, "Editing map" %>
 
-<h1>編集</h1>
+<h3 class="mt-4">編集</h3>
 
 <%= render "form", map: @map %>
 
 <br>
 
-<div>
-  <%= link_to "表示", @map %> |
-  <%= link_to "戻る", maps_path %>
+<div class="fs-5">
+  <%# = link_to "表示", @map %>
+  <%= link_to "一覧へ", maps_path %>
 </div>

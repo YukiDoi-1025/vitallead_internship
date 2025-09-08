@@ -1,24 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 準備
+* Ruby と Ruby on Rails を自分の開発環境にインストールして下さい。バージョンは以下の通りです。
+```
+Ruby: 3.4.5
+Ruby on Rails: 8.0.2
+```
 
-Things you may want to cover:
+* githubアカウントがない場合は作成してください。
+エンジニアはgithubでやりとりすることが多く大学卒業後も使うことになると思うので、登録時のメールアドレスは Gmail などが好ましいです。
 
-* Ruby version
+## アプリの立ち上げ方
 
-* System dependencies
+### アプリのクローン
+PCに作業フォルダを作成し、このリポジトリを下記のコマンドで自分の作業フォルダにクローンして下さい。
+```
+git clone https://github.com/YukiDoi-1025/vitallead_internship.git
+```
 
-* Configuration
+### gem インストール
+アプリのフォルダに移動し gemをインストール
+```
+cd 作業ディレクトリ/intern
+bundle install
+```
 
-* Database creation
+### データベース構築・サーバー起動
+```
+# データベース構築
+rails db:migrate
 
-* Database initialization
+# サーバー起動
+rails s
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+http://localhost:3000/maps にアクセス。
